@@ -1,0 +1,45 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.example-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.example-full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+button {
+   float: right;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.example-form {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+.close-icon-container {
+    float: right;
+    margin-bottom: 20px; /* Add margin to separate from the form */
+}

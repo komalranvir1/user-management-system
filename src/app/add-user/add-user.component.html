@@ -1,0 +1,41 @@
+<div class="container user-form">
+    <form [formGroup]="userForm" class="example-form">
+        <div class="close-icon-container">
+            <mat-icon (click)="closeDialog()">close</mat-icon>
+        </div>
+     
+        <!-- User form fields -->
+        <div class="example-full-width">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+        </div>
+
+        <div class="example-full-width">
+            <mat-form-field>
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" (blur)="updateErrorMessage()" required>
+            </mat-form-field>
+            <mat-error *ngIf="userForm.get('email')?.hasError('email')">
+                Please enter a valid email address
+            </mat-error>
+        </div>
+
+        <div class="example-full-width">
+            <mat-form-field>
+                <mat-label>Select Role</mat-label>
+                <mat-select formControlName="role">
+                    <mat-option value="Admin">Admin</mat-option>
+                    <mat-option value="User">User</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div >
+            <button type="button" class="btn btn-success" (click)="save()" [disabled]="userForm.invalid">Add User</button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="closeDialog()" >Cancel</button>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,122 @@
+table {
+  width: 100%;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+.btn-add{
+  
+margin-left: 86vw;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.search-container {
+  flex: 1;
+ margin-right: 10px;    /* Adjust spacing as needed */
+}
+
+.button-container {
+  flex-shrink: 0;
+}
+.container {
+  position: relative;
+}
+
+.header-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+      display: flex;
+  align-items: center;
+}
+
+.search-container {
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.button-container {
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+.delete-icon {
+  color: red; /* Change the color */
+  fill: red; /* Change the fill */
+}
+.edit-icon{
+  color: skyblue;
+}
+.mat-header-cell {
+  background-color: #3fabb5; /* Example primary color */
+  color: #ffffff; /* Example text color */
+}
+
+
+/* mobile view */
+
+.table-container {
+  overflow-x: auto;
+}
+
+/* Hide the User List title on mobile devices */
+@media (max-width: 600px) {
+  .hide-on-mobile {
+      display: none;
+  }
+  .user-table{
+    padding-top: 10vh;
+  }
+  .header-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      
+  }
+.search-container{
+  width: 40vw;
+}
+
+  .button-container {
+    /* display: flex; */
+      margin-top: 10px;
+   
+  }
+
+  mat-form-field {
+      width: 100%;
+  } 
+
+  .edit-icon, .delete-icon {
+      cursor: pointer;
+  }
+}
+
+/* Adjustments for the mat-paginator */
+.mat-paginator {
+  display: flex;
+  justify-content: center;
+}
+
+/* Extra styles for table responsiveness */
+@media (max-width: 600px) {
+  table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+
+  th.mat-header-cell, td.mat-cell {
+      padding: 8px;
+      text-align: left;
+  }
+}
